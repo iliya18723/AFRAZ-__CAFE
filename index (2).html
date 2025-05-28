@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AFRAZ CAFE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@500;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" />
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: #1c1c1c;
+      color: #fff;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      padding-top: 70px;
+    }
+    header {
+      background: linear-gradient(135deg, #000, #2e2e2e);
+      text-align: center;
+      padding: 15px 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+      backdrop-filter: saturate(180%) blur(10px);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    header.scrolled {
+      background-color: rgba(246, 201, 14, 0.15);
+      box-shadow: 0 4px 30px rgba(246, 201, 14, 0.7);
+    }
+    h1 {
+      color: #f6c90e;
+      font-weight: 900;
+      font-size: 36px;
+      text-shadow: 0 0 10px #000;
+      margin: 0;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 100%;
+      gap: 10px;
+    }
+    nav li {
+      margin: 0;
+    }
+    nav li a {
+      padding: 8px 22px;
+      border: 2px solid #f6c90e;
+      border-radius: 50px;
+      color: #f6c90e;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    nav li a:hover,
+    nav li a.active {
+      background-color: #f6c90e;
+      color: #1c1c1c;
+      transform: scale(1.1);
+      box-shadow: 0 0 12px #f6c90e;
+    }
+    section {
+      padding: 60px 20px;
+    }
+    h2 {
+      color: #f6c90e;
+      border-bottom: 3px solid #f6c90e;
+      padding-bottom: 10px;
+      margin-bottom: 40px;
+      font-size: 36px;
+      text-align: center;
+    }
+    .menu-column {
+      background-color: #2a2a2a;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+    .menu-column h3 {
+      color: #f6c90e;
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      padding: 10px 20px;
+      background-color: #3a3a3a;
+      border-radius: 12px;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+    .menu-item:hover {
+      background-color: #4a4a4a;
+      transform: scale(1.02);
+    }
+    footer {
+      background-color: #111;
+      color: #f6c90e;
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+    a.instagram-link {
+      color: #f6c90e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    a.instagram-link:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 12px;
+      }
+      #espresso .container > .row > div,
+      #icecoffee .container > .row > div {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      section:not(#espresso):not(#icecoffee) .container > .row > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="main-header">
+    <h1>AFRAZ CAFE</h1>
+    <nav>
+      <ul>
+        <li><a href="#espresso">اسپرسو بار</a></li>
+        <li><a href="#icecoffee">آیس کافی</a></li>
+        <li><a href="#brew">قهوه دمی</a></li>
+        <li><a href="#hotdrinks">نوشیدنی گرم</a></li>
+        <li><a href="#tea">چای‌ها</a></li>
+        <li><a href="#shakes">شیک‌ها</a></li>
+        <li><a href="#smoothies">اسموتی‌ها</a></li>
+        <li><a href="#mocktails">ماکیتل‌ها</a></li>
+        <li><a href="#about">درباره ما</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- اسپرسو بار -->
+    <section id="espresso">
+      <h2>اسپرسو بار</h2>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="menu-column">
+              <h3>۸۰٪ عربیکا</h3>
+              <div class="menu-item"><span>اسپرسو سینگل</span><span>۴۵,۰۰۰ تومان</span></div>
+              <div class="menu-item"><span>اسپرسو دبل</span><span>۶۵,۰۰۰ تومان</span></div>
+              <div class="menu-item"><span>آمریکانو</span><span>۸۰,۰۰۰ تومان</span></div>
+              <div class="menu-item"><span>کاپوچینو</span><span>۸۰,۰۰۰ تومان</span></div>
+              <div class="menu-item"><span>لاته</span><span>۹۵,۰۰۰ تومان</span></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-column">
+              <h3>۷۰٪ روبوستا</h3>
+              <div class="menu-item"><span>اسپرسو سینگل</span><span>۳۵,۰۰۰ تومان</span></div>
+              <div class="menu-item"><span>اسپرسو دبل</span><span>۵۵,۰۰۰ تومان</span></div>
+              <div class="menu-item"><span>آمریکانو</span><span>۷۰,۰۰۰ تومان</span></div>
+              <div class="menu-item"><span>کاپوچینو</span><span>۷۰,۰۰۰ تومان</span></div>
+              <div class="menu-item"><span>لاته</span><span>۸۵,۰۰۰ تومان</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- آیس کافی -->
+    <section id="icecoffee">
+      <h2>آیس کافی</h2>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="menu-column">
+              <h3>۸۰٪ عربیکا</h3>
+              <div class="menu-item"><span>آیس آمریکانو</span><span>۸۰,۰۰۰ تومان</span></div>
+              <div class="menu-item"><span>آیس لاته</span><span>۹۵,۰۰۰ تومان</span></div>
+              <div class="menu-item"><span>آیس موکا</span><span>۱۱۰,۰۰۰ تومان</span></div>
+              <div class="menu-item"><span>آیس کارامل ماکیاتو</span><span>۱۲۰,۰۰۰ تومان</span></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-column">
+              <h3>۷۰٪ روبوستا</h3>
+              <div class="menu-item"><span>آیس آمریکانو</span><span>۸۰,۰۰۰ تومان</span></div>
+              <div class="menu-item"><span>آیس لاته</span><span>۹۵,۰۰۰ تومان</span></div>
+              <div class="menu-item"><span>آیس موکا</span><span>۱۱۰,۰۰۰ تومان</span></div>
+              <div class="menu-item"><span>آیس کارامل ماکیاتو</span><span>۱۲۰,۰۰۰ تومان</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قهوه دمی -->
+    <section id="brew">
+      <h2>قهوه دمی</h2>
+      <div class="container">
+        <div class="menu-column mx-auto" style="max-width: 400px;">
+          <div class="menu-item"><span>قهوه ترک</span><span>۵۰,۰۰۰ تومان</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- نوشیدنی گرم -->
+    <section id="hotdrinks">
+      <h2>نوشیدنی گرم</h2>
+      <div class="container">
+        <div class="menu-column mx-auto" style="max-width: 400px;">
+          <div class="menu-item"><span>هات چاکلت</span><span>۹۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>وایت چاکلت</span><span>۸۰,۰۰۰ تومان</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- چای‌ها -->
+    <section id="tea">
+      <h2>چای‌ها</h2>
+      <div class="container">
+        <div class="menu-column mx-auto" style="max-width: 400px;">
+          <div class="menu-item"><span>چای سیاه</span><span>۴۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>چای ترش</span><span>۵۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>چای دارچین</span><span>۵۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>چای سبز</span><span>۵۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>چای ماسالا</span><span>۸۰,۰۰۰ تومان</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- شیک‌ها -->
+    <section id="shakes">
+      <h2>شیک‌ها</h2>
+      <div class="container">
+        <div class="menu-column mx-auto" style="max-width: 400px;">
+          <div class="menu-item"><span>شیک نوتلا</span><span>۱۴۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>شیک اورئو</span><span>۱۳۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>شیک بادام‌زمینی</span><span>۱۴۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>شیک لوتوس</span><span>۱۳۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>شیک چیزکیک</span><span>۱۳۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>شیک توت‌فرنگی</span><span>۱۳۰,۰۰۰ تومان</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- اسموتی‌ها -->
+    <section id="smoothies">
+      <h2>اسموتی‌ها</h2>
+      <div class="container">
+        <div class="menu-column mx-auto" style="max-width: 400px;">
+          <div class="menu-item"><span>پیناکولادا</span><span>۱۲۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>اسموتی Fresh</span><span>۱۲۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>اسموتی Lovely</span><span>۱۳۰,۰۰۰ تومان</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ماکیتل‌ها -->
+    <section id="mocktails">
+      <h2>ماکیتل‌ها</h2>
+      <div class="container">
+        <div class="menu-column mx-auto" style="max-width: 400px;">
+          <div class="menu-item"><span>گلکسی</span><span>۱۴۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>کارولین</span><span>۱۴۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>اناهیل</span><span>۱۴۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>موهیتو کلاسیک</span><span>۱۳۰,۰۰۰ تومان</span></div>
+          <div class="menu-item"><span>موهیتو قرمز</span><span>۱۳۰,۰۰۰ تومان</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- درباره ما -->
+    <section id="about">
+      <h2>درباره ما</h2>
+      <div class="container">
+        <p style="max-width: 700px; margin: auto; font-size: 18px; line-height: 1.6; color: #ccc; text-align: center;">
+          افراز کافه مکانی‌ست برای تجربه یک قهوه خوب و لحظاتی دلنشین. ما با انتخاب بهترین دانه‌های قهوه و تهیه نوشیدنی‌ها با عشق و دقت، سعی داریم هر بار لحظه‌ای خاص برای شما بسازیم.  
+          در کنار فضای گرم و دوستانه، منتظر حضور شما هستیم.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>برای مشاهده منو و اطلاعات بیشتر به <a class="instagram-link" href="https://www.instagram.com/afrazcafe" target="_blank" rel="noopener noreferrer">صفحه اینستاگرام افراز کافه</a> مراجعه کنید.</p>
+    <p>© 2025 Afraz Cafe. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // اسکرول به بخش‌ها با تغییر حالت لینک منو
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+        this.classList.add('active');
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // تغییر کلاس هدر هنگام اسکرول
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
